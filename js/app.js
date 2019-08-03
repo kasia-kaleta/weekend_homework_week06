@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const newCelebForm = document.querySelector('#new-celeb-form');
   newCelebForm.addEventListener('submit', handleNewCelebFormSubmit);
-  // console.log(event.target.value);
+  
 });
 
 const handleNewCelebFormSubmit = function (event) {
@@ -16,7 +16,7 @@ const handleNewCelebFormSubmit = function (event) {
 }
 
 const createCelebListItem = function (form) {
-  const celebListItem = document.createElement('h2');
+  const celebListItem = document.createElement('li');
   celebListItem.classList.add('celebrity');
 
   const firstName = document.createElement('h3');
