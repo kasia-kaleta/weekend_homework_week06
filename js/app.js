@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const newCelebForm = document.querySelector('#new-celeb-form');
   newCelebForm.addEventListener('submit', handleNewCelebFormSubmit);
-  
+
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
+
 });
 
 const handleNewCelebFormSubmit = function (event) {
@@ -36,4 +39,9 @@ const createCelebListItem = function (form) {
   celebListItem.appendChild(nationality);
 
   return celebListItem;
+}
+
+const handleDeleteAllClick = function (event) {
+  const celebList = document.querySelector('#celeb-list');
+  celebList.innerHTML = '';
 }
