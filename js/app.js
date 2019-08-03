@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const newCelebForm = document.querySelector('#new-celeb-form');
   newCelebForm.addEventListener('submit', handleNewCelebFormSubmit);
+  // console.log(event.target.value);
 });
 
 const handleNewCelebFormSubmit = function (event) {
@@ -8,30 +9,31 @@ const handleNewCelebFormSubmit = function (event) {
 
   const celebListItem = createCelebListItem(event.target);
   const celebList = document.querySelector('#celeb-list');
+
   celebList.appendChild(celebListItem);
 
   event.target.reset();
 }
 
 const createCelebListItem = function (form) {
-  const celebListItem = document.createElement('li');
+  const celebListItem = document.createElement('h2');
   celebListItem.classList.add('celebrity');
 
-  const firstName = document.createElement('h2');
-  firstName.textContent = form.firstName.value;
+  const firstName = document.createElement('h3');
+  firstName.textContent = event.target.first_name.value
   celebListItem.appendChild(firstName);
 
-  const lastName = document.createElement('h2');
-  lastName.textContent = form.lastName.value;
+  const lastName = document.createElement('h3');
+  lastName.textContent = event.target.last_name.value;
   celebListItem.appendChild(lastName);
 
-  const occupation = document.createElement('h3');
-  occupation.textContent = form.occupation.value;
+  const occupation = document.createElement('p');
+  occupation.textContent = event.target.occupation.value;
   celebListItem.appendChild(occupation);
 
   const nationality = document.createElement('p');
-  nationality.textContent = form.nationality.value;
+  nationality.textContent = event.target.nationality.value;
   celebListItem.appendChild(nationality);
 
-  return readingListItem;
+  return celebListItem;
 }

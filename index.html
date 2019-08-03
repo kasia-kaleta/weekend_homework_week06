@@ -10,18 +10,18 @@
     <form id="new-celeb-form">
       <div id="form-wrapper">
         <div class="form-item">
-          <label for="first-name" class="primary">First Name</label>
-          <input type="text" id="first-name" required/>
+          <label for="first_name" class="primary">First Name</label>
+          <input type="text" name="first_name" required/>
         </div>
 
         <div class="form-item">
-          <label for="last-name" class="primary">Last name</label>
-          <input type="text" id="last-name" required/>
+          <label for="last_name" class="primary">Last Name</label>
+          <input type="text" name="last_name" required/>
         </div>
 
         <div class="form-item">
           <label for="occupation" class="primary">Occupation</label>
-          <select class="occupation">
+          <select id="occupation">
             <option value="" disabled selected></option>
             <option value="Actor">Actor</option>
             <option value="Singer">Singer</option>
@@ -34,7 +34,7 @@
 
         <div class="form-item">
           <label for="nationality" class="primary">Nationality</label>
-          <select class="nationality">
+          <select id="nationality">
             <option value="" disabled selected></option>
             <option value="British">British</option>
             <option value="American">American</option>
@@ -47,7 +47,9 @@
     </form>
 
     <h1>List of Favourite Celebrities</h1>
-      <div id="celeb-list"></div>
+      <div id="celeb-list">
+
+      </div>
 
   </body>
 </html>
